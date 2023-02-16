@@ -40,13 +40,21 @@ html {
 .article-wrapper .nav-bar p {
   font-size: 2rem;
   font-weight: bold;
+  cursor: pointer;
 }
 .article-wrapper .nav-bar ul {
   display: flex;
   list-style: none;
   font-size: 1.7rem;
   gap: 5rem;
-  color: gray;
+  color: rgb(195, 193, 193);
+}
+.article-wrapper .nav-bar ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.article-wrapper .nav-bar ul li:hover {
+  color: white;
 }
 .article-wrapper .nav-bar button {
   cursor: pointer;
@@ -55,6 +63,10 @@ html {
   width: 15rem;
   height: 5rem;
   border-radius: 0.3rem;
+  transition: 0.3s;
+}
+.article-wrapper .nav-bar button:hover {
+  background-color: #ddc931;
 }
 .article-wrapper .nav-bar img {
   position: absolute;
@@ -73,7 +85,7 @@ html {
   font-weight: 400;
 }
 .article-wrapper .tittle-area .tittle-content p {
-  color: gray;
+  color: rgb(195, 193, 193);
   font-size: 2rem;
   letter-spacing: 0.2rem;
   margin: 1.5rem 0;
@@ -85,8 +97,15 @@ html {
   margin: 6rem 0;
   position: relative;
 }
+.article-wrapper .tittle-area .brand-logo img {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .article-wrapper .tittle-area .brand-logo .tinder-logo {
-  height: 2.7rem;
+  height: 26px;
   position: absolute;
   padding-right: 0.3rem;
 }
@@ -103,17 +122,24 @@ html {
 .article-wrapper .article-body .letf-article-body img {
   width: 100%;
 }
-.article-wrapper .article-body .letf-article-body h2 {
+.article-wrapper .article-body .letf-article-body span {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.article-wrapper .article-body .letf-article-body span h2 {
   font-size: 5rem;
   font-weight: 300;
 }
-.article-wrapper .article-body .letf-article-body h2 i {
+.article-wrapper .article-body .letf-article-body span i {
   color: white;
+  font-size: 3rem;
 }
 .article-wrapper .article-body .letf-article-body p {
   margin-top: 1rem;
   font-size: 2rem;
-  color: gray;
+  color: rgb(195, 193, 193);
 }
 .article-wrapper .article-body .right-article-body {
   width: 50%;
@@ -122,18 +148,25 @@ html {
 .article-wrapper .article-body .right-article-body img {
   width: 100%;
 }
-.article-wrapper .article-body .right-article-body h2 {
+.article-wrapper .article-body .right-article-body span {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.article-wrapper .article-body .right-article-body span h2 {
   font-size: 5rem;
   font-weight: 300;
 }
-.article-wrapper .article-body .right-article-body h2 i {
+.article-wrapper .article-body .right-article-body span i {
   color: white;
+  font-size: 3rem;
 }
 .article-wrapper .article-body .right-article-body p {
   width: 100%;
   margin-top: 1rem;
   font-size: 2rem;
-  color: gray;
+  color: rgb(195, 193, 193);
 }
 
 .about-wrapper {
@@ -161,7 +194,7 @@ html {
 .about-wrapper .achivement-box-wrapper .achievement-left p {
   margin: 2.5rem 0;
   font-size: 2.2rem;
-  color: gray;
+  color: rgb(195, 193, 193);
   line-height: 2.7rem;
   letter-spacing: 0.1rem;
 }
@@ -172,7 +205,7 @@ html {
 .about-wrapper .achivement-box-wrapper .achievement-right p {
   margin: 2.5rem 0;
   font-size: 2.2rem;
-  color: gray;
+  color: rgb(195, 193, 193);
   line-height: 2.7rem;
   letter-spacing: 0.1rem;
 }
@@ -199,6 +232,7 @@ html {
   font-size: 2rem;
   line-height: 3rem;
   margin: 1rem 0;
+  color: rgb(195, 193, 193);
 }
 .footer-wrapper .top-footer-wrapper .top-footer-container button {
   cursor: pointer;
@@ -229,8 +263,11 @@ html {
   display: flex;
   gap: 2rem;
 }
+.footer-wrapper .bottom-footer-wrapper .bottom-footer-container h2 {
+  font-size: 1.8rem;
+}
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   html {
     font-size: 9px;
   }
@@ -252,7 +289,7 @@ html {
     gap: 2rem;
     margin: 4rem 0rem 4rem 0;
   }
-  .article-wrapper .tittle-area .brand-logo img, .article-wrapper .tittle-area .brand-logo span :not(.tinder-span img) {
+  .article-wrapper .tittle-area .brand-logo img :not(.tinder-span img) {
     padding: 3rem;
   }
   .article-wrapper .tittle-area .tittle-content {
