@@ -35,6 +35,7 @@ html {
   align-items: baseline;
   justify-content: space-between;
   padding: 3rem 0;
+  position: relative;
 }
 .article-wrapper .nav-bar p {
   font-size: 2rem;
@@ -54,6 +55,11 @@ html {
   width: 15rem;
   height: 5rem;
   border-radius: 0.3rem;
+}
+.article-wrapper .nav-bar img {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
 }
 .article-wrapper .tittle-area {
   width: 100%;
@@ -190,7 +196,7 @@ html {
   font-size: 3.7rem;
 }
 .footer-wrapper .top-footer-wrapper .top-footer-container p {
-  font-size: 1.9rem;
+  font-size: 2rem;
   line-height: 3rem;
   margin: 1rem 0;
 }
@@ -222,4 +228,74 @@ html {
 .footer-wrapper .bottom-footer-wrapper .bottom-footer-container .footer-social-icon {
   display: flex;
   gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 9px;
+  }
+  .article-wrapper .nav-bar {
+    margin-bottom: 3rem;
+  }
+  .article-wrapper .nav-bar ul, .article-wrapper .nav-bar button {
+    display: none;
+  }
+  .article-wrapper .nav-bar p {
+    font-size: 3rem;
+  }
+  .article-wrapper .nav-bar img {
+    visibility: visible;
+  }
+  .article-wrapper .tittle-area .brand-logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0rem 4rem 0;
+  }
+  .article-wrapper .tittle-area .brand-logo img, .article-wrapper .tittle-area .brand-logo span :not(.tinder-span img) {
+    padding: 3rem;
+  }
+  .article-wrapper .tittle-area .tittle-content {
+    width: 100%;
+  }
+  .article-wrapper .article-body {
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .article-wrapper .article-body .letf-article-body {
+    width: 100%;
+    overflow: hidden;
+  }
+  .article-wrapper .article-body .right-article-body {
+    width: 100%;
+    overflow: hidden;
+  }
+  .about-wrapper .achivement-box-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .about-wrapper .achivement-box-wrapper .achievement-left {
+    width: 100%;
+    height: 100%;
+  }
+  .footer-wrapper .top-footer-wrapper .top-footer-container {
+    width: 75%;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 5px;
+  }
+  .article-wrapper .nav-bar {
+    margin-bottom: 6rem;
+  }
+  .article-wrapper .nav-bar ul, .article-wrapper .nav-bar button {
+    display: none;
+  }
+  .article-wrapper .nav-bar p {
+    font-size: 3rem;
+  }
+  .article-wrapper .nav-bar img {
+    visibility: visible;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -33,6 +33,7 @@ html{
         align-items: baseline;
         justify-content: space-between;
         padding: 3rem 0;
+        position: relative;
         p{
             font-size: 2rem;
             font-weight: bold;
@@ -52,6 +53,14 @@ html{
             width: 15rem;
             height: 5rem;
             border-radius: .3rem;
+        }
+        img{
+            // display: inline-block;
+            position: absolute;
+            right: 0;
+            visibility: hidden;
+            
+            
         }
     }
     .tittle-area{
@@ -248,3 +257,76 @@ html{
     }
 }
 
+@media(max-width:800px){
+    html{
+        font-size: 9px;
+    }
+    .article-wrapper .nav-bar {
+        margin-bottom: 3rem;
+        ul,button{
+            display: none;
+        }
+        p{
+            font-size: 3rem;
+        }
+        img{
+            visibility: visible;
+        }
+    }
+    .article-wrapper .tittle-area .brand-logo{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 4rem 0rem 4rem 0;
+
+        img, span :not(.tinder-span img){
+            padding: 3rem;
+        }
+        
+    }
+    .article-wrapper .tittle-area .tittle-content {
+        width: 100%;
+        
+     }
+     .article-wrapper .article-body {
+        flex-direction: column;
+        gap: 8rem;
+      }
+      .article-wrapper .article-body .letf-article-body {
+        width: 100%;
+        overflow: hidden;
+      }
+      .article-wrapper .article-body .right-article-body {
+        width: 100%;
+        overflow: hidden;
+      }
+      .about-wrapper .achivement-box-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .about-wrapper .achivement-box-wrapper .achievement-left {
+        width: 100%;
+        height: 100%;
+      }
+      .footer-wrapper .top-footer-wrapper .top-footer-container {
+        width: 75%;
+      }
+}
+@media(max-width:480px){
+    html{
+        font-size: 5px;
+    }
+    .article-wrapper .nav-bar {
+        margin-bottom: 6rem;
+        // align-items: center;
+        ul,button{
+            display: none;
+        }
+        p{
+            font-size: 3rem;
+        }
+        img{
+            visibility: visible;
+        }
+    }
+}
